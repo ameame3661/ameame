@@ -1,0 +1,175 @@
+#include <stdio.h>
+
+int main()
+{
+  int c, t, a, l, e;
+  float resultado, chance_parcial, por_torcedor, por_entrosa, por_lesao;
+  char qlif;
+  scanf("%d%d%d%d%d", &c, &t, &a, &l, &e);
+  if (c == 1)
+  {
+    //11++
+    if (t == 1 && a > 40000 && e > 0)
+    {
+      por_torcedor = a * 0.0008;
+      por_entrosa = e * 2.7;
+      por_lesao = l * 2.7;
+      chance_parcial = ((((100 + 33.21) + por_torcedor) + por_entrosa) - por_lesao);
+      qlif = 'a';
+    }
+    //11+-
+    else if (t == 1 && a > 40000 && e < 0)
+    {
+      por_torcedor = a * 0.0008;
+      por_entrosa = (e * 1.8) * (-1);
+      por_lesao = l * 2.7;
+      chance_parcial = ((((100 + 33.21) + por_torcedor) - por_entrosa) - por_lesao);
+      qlif = 'b';
+    }
+    //11--
+    else if (t == 1 && a <= 40000 && e < 0)
+    {
+      por_torcedor = a * 0.0008;
+      por_entrosa = (e * 1.8) * (-1);
+      por_lesao = l * 2.7;
+      chance_parcial = ((((100 + 33.21) - por_torcedor) - por_entrosa) - por_lesao);
+      qlif = 'c';
+    }
+    //11-+
+    else if (t == 1 && a <= 40000 && e > 0)
+    {
+      por_torcedor = a * 0.0008;
+      por_entrosa = e * 2.7;
+      por_lesao = l * 2.7;
+      chance_parcial = ((((100 + 33.21) - por_torcedor) + por_entrosa) - por_lesao);
+      qlif = 'd';
+    }
+    //12++
+    else if (t == 2 && a > 40000 && e > 0)
+    {
+      por_torcedor = a * 0.0008;
+      por_entrosa = e * 2.7;
+      por_lesao = l * 2.7;
+      chance_parcial = ((((100 + 10.51) + por_torcedor) + por_entrosa) - por_lesao);
+      qlif = 'e';
+    }
+    //12+-
+    else if (t == 2 && a > 40000 && e < 0)
+    {
+      por_torcedor = a * 0.0008;
+      por_entrosa = (e * 1.8) * (-1);
+      por_lesao = l * 2.7;
+      chance_parcial = ((((100 + 10.51) + por_torcedor) - por_entrosa) - por_lesao);
+      qlif = 'f';
+    }
+    //12--
+    else if (t == 2 && a <= 40000 && e < 0)
+    {
+      por_torcedor = a * 0.0008;
+      por_entrosa = (e * 1.8) * (-1);
+      por_lesao = l * 2.7;
+      chance_parcial = ((((100 + 10.51) - por_torcedor) - por_entrosa) - por_lesao);
+      qlif = 'g';
+    }
+    //12-+
+    else if (t == 2 && a <= 40000 && e > 0)
+    {
+      por_torcedor = a * 0.0008;
+      por_entrosa = e * 2.7;
+      por_lesao = l * 2.7;
+      chance_parcial = ((((100 + 10.51) - por_torcedor) + por_entrosa) - por_lesao);
+      qlif = 'h';
+    }
+    //13++
+    else if (t == 3 && a > 40000 && e > 0)
+    {
+      por_torcedor = a * 0.0008;
+      por_entrosa = e * 2.7;
+      por_lesao = l * 2.7;
+      chance_parcial = ((((100 - 20.7) + por_torcedor) + por_entrosa) - por_lesao);
+      qlif = 'i';
+    }
+    //13+-
+    else if (t == 3 && a > 40000 && e < 0)
+    {
+      por_torcedor = a * 0.0008;
+      por_entrosa = (e * 1.8) * (-1);
+      por_lesao = l * 2.7;
+      chance_parcial = ((((100 - 20.7) + por_torcedor) - por_entrosa) - por_lesao);
+      qlif = 'j';
+    }
+    //13--
+    else if (t == 3 && a <= 40000 && e < 0)
+    {
+      por_torcedor = a * 0.0008;
+      por_entrosa = (e * 1.8) * (-1);
+      por_lesao = l * 2.7;
+      chance_parcial = ((((100 - 20.7) - por_torcedor) - por_entrosa) - por_lesao);
+      qlif = 'k';
+    }
+    //13-+
+    else if (t == 3 && a <= 40000 && e > 0)
+    {
+      por_torcedor = a * 0.0008;
+      por_entrosa = e * 2.7;
+      por_lesao = l * 2.7;
+      chance_parcial = ((((100 - 20.7) - por_torcedor) + por_entrosa) - por_lesao);
+      qlif = 'l';
+    }
+  }
+  if (c == 0)
+  {
+    //01++
+    if (t == 1 && a > 45000 && e > 0)
+    {
+      por_torcedor = a * 0.0003;
+      por_entrosa = e * 5.2;
+      por_lesao = l * 2.7;
+      chance_parcial = ((((100 - 10.87) - por_torcedor) + por_entrosa) - por_lesao);
+      qlif = 'm';
+    }
+    //01+-
+    else if (t == 1 && a > 45000 && e < 0)
+    {
+      por_torcedor = a * 0.0003;
+      por_entrosa = (e * 1.5) * (-1);
+      por_lesao = l * 2.7;
+      chance_parcial = ((((100 - 10.87) - por_torcedor) - por_entrosa) - por_lesao);
+      qlif = 'n';
+    }
+    //01--
+    else if (t == 1 && a <= 45000 && e < 0)
+    {
+      por_torcedor = a * 0.0001;
+      por_entrosa = (e * 1.5) * (-1);
+      por_lesao = l * 2.7;
+      chance_parcial = ((((100 - 10.87) - por_torcedor) - por_entrosa) - por_lesao);
+      qlif = 'o';
+    }
+    //01-+
+    else if (t == 1 && a <= 45000 && e > 0)
+    {
+      por_torcedor = a * 0.0001;
+      por_entrosa = e * 5.2;
+      por_lesao = l * 2.7;
+      chance_parcial = ((((100 - 10.87) - por_torcedor) + por_entrosa) - por_lesao);
+      qlif = 'p';
+    }
+    else if (t == 2 || t == 3)
+    {
+      chance_parcial = 0;
+      qlif = 'q';
+    }
+  }
+  if (chance_parcial > 100)
+  {
+    chance_parcial = 100;
+    resultado = chance_parcial;
+  }
+  else
+  {
+    resultado = chance_parcial;
+  }
+  printf("A chance de vitoria do flamengo e de %.2f\n %c\n", resultado, qlif);
+  return 0;
+}
